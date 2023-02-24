@@ -10,18 +10,20 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
 @Entity
-@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class Genre {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long gno;
+  private long gno;
   private String genre;
 
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "genre", cascade = CascadeType.ALL)
