@@ -22,6 +22,6 @@ public class Genre {
   private Long gno;
   private String genre;
 
-  @OneToMany(fetch = FetchType.LAZY, mappedBy = "movie", cascade = CascadeType.ALL)
+  @OneToMany(fetch = FetchType.LAZY, mappedBy = "genre", cascade = CascadeType.ALL)
   private List<Movie> movieList = new ArrayList<>();
 }
