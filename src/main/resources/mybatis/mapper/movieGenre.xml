@@ -10,7 +10,7 @@
 	<select id="findAllGenre" resultType="com.study.springboot.entity.Genre">
 		select * from genre
 	</select>
-</mapper>
+
 
 	<!-- 	<where>
 		<if test="type == 'S'.toString()">
@@ -20,3 +20,14 @@
 		ename like CONCAT('%',#{search},'%')
 		</if>
 		</where> -->
+
+
+	<update id="update">
+	update Movie set title =#{title}, content =#{content}
+	where mno = #{mno}
+	</update>
+
+
+
+
+</mapper>
