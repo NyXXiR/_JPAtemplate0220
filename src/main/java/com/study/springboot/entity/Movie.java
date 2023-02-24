@@ -19,12 +19,13 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Movie {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-  private Long mno;
+  private Integer mno;
   private String title;
   private String content;
 

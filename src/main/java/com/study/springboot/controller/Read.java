@@ -22,9 +22,11 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 @Log4j2
 public class Read {
-  MovieMapper movieMapper;
-  GenreRepository genreRepository;
-  MovieRepository movieRepository;
+  final MovieMapper movieMapper;
+  final GenreRepository genreRepository;
+  final MovieRepository movieRepository;
+
+
 
   @GetMapping("/")
   public String root() {
@@ -33,8 +35,9 @@ public class Read {
 
   @GetMapping("/list")
   public String ListMovie(Model model) {
-    // List<Movie> list = MovieRepository.findAll();
-    List<Movie> list = movieMapper.findAllMovie("%", "A");
+    List<Movie> list = movieRepository.findAll();
+
+    // List<Movie> list = movieMapper.findAllMovie("%", "A");
     model.addAttribute("list", list);
     return "view/list";
   }
