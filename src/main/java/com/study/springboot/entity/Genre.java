@@ -18,7 +18,7 @@ import lombok.ToString;
 public class Genre {
 	@Id
 	
-	private int gno;
+	private Long gno;
 	private String genre;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy= "movie",

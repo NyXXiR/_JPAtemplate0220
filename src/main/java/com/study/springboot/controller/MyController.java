@@ -12,10 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.study.springboot.entity.Emp;
-import com.study.springboot.entity.Master;
-import com.study.springboot.jdbc.EmpDeptMapper;
-import com.study.springboot.repository.EmpRepository;
+import com.study.springboot.jdbc.MovieMapper;
+import com.study.springboot.repository.GenreRepository;
 import com.study.springboot.repository.MasterRepository;
 
 import jakarta.websocket.server.PathParam;

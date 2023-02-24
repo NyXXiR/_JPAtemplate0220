@@ -5,11 +5,8 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.study.springboot.entity.Dept;
-import com.study.springboot.entity.Emp;
-
 @Mapper
-public interface EmpDeptMapper {
+public interface MovieMapper {
 	public List<Emp> findAllEmp
 	( @Param("search") String search, 
 			@Param("type") String type);
