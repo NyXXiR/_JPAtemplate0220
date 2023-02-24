@@ -27,10 +27,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class MyController {
 
-	private final EmpRepository empRepository;
-	private final EmpDeptMapper empDeptMapper;
-	private final MasterRepository masterRepository;
-	
+
 	@GetMapping("/")
 	public String root() {
 		return "view/index";
