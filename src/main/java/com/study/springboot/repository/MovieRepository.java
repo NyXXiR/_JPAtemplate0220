@@ -8,6 +8,6 @@ import com.study.springboot.entity.Movie;
  */
 
 
-public interface MovieRepository extends JpaRepository<Movie, Integer> {
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 
 }

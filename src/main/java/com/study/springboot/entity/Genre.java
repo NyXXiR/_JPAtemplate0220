@@ -23,7 +23,7 @@ import lombok.Setter;
 public class Genre {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer gno;
+  private long gno;
   private String genre;
 
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "genre", cascade = CascadeType.ALL)
