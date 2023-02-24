@@ -19,11 +19,13 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 @RequestMapping("/view/*")
 public class Update {
-	MovieRepository movieRepository;
+	final MovieRepository movieRepository;
 	
 	@GetMapping("/update")
 	public void update(long mno, Model model) {
+		
 		Optional<Movie> movie = movieRepository.findById(mno);
+		
 		model.addAttribute("movie",movie);
 	}
 	
