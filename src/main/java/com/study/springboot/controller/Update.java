@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -21,18 +22,15 @@ import lombok.extern.log4j.Log4j2;
 public class Update {
 	final MovieRepository movieRepository;
 	
-	@GetMapping("/update")
-	public void update(long mno, Model model) {
-		
+	@GetMapping("/update/{mno}")
+	public String update(@PathVariable long mno, Model model) {
+		log.info("-----------------"+mno);
+	
 		Optional<Movie> movie = movieRepository.findById(mno);
+		log.info("-----------------"+movie);
 		
 		model.addAttribute("movie",movie);
+		return "update";
 	}
 	
-	@PostMapping("/update")
-	public String upload(Movie movie) {
-		movieRepository.save(movie);
-
-		return "redirect:/view/list";
-	}
 }

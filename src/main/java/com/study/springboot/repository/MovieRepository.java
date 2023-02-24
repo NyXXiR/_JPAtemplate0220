@@ -1,5 +1,7 @@
 package com.study.springboot.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.study.springboot.entity.Movie;
 
@@ -8,5 +10,6 @@ import com.study.springboot.entity.Movie;
  */
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
+
 
 }
