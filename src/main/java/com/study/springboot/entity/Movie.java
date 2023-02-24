@@ -10,7 +10,9 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,11 +32,11 @@ public class Movie {
 
 	private Long mno;
 	private String title;
+	private String content;
+
 	
-	/*mappedby는 Poster class에 필드명 movie가 주인이다.
-	 * posterList라는 테이블이 생성되지 않게 한다.*/
-	@OneToMany(fetch = FetchType.LAZY, mappedBy= "movie",
-			cascade =CascadeType.ALL) 
-	private List<Poster>posterList = new ArrayList<>();
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	private List<Genre>genreList = new ArrayList<>();
 	
 }

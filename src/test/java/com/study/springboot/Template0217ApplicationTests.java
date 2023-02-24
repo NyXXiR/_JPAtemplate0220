@@ -14,8 +14,8 @@ import com.study.springboot.entity.Poster;
 import com.study.springboot.entity.Product;
 import com.study.springboot.entity.ProductDetail;
 import com.study.springboot.entity.Slave;
-import com.study.springboot.jdbc.EmpDeptMapper;
-import com.study.springboot.repository.EmpRepository;
+import com.study.springboot.jdbc.MovieMapper;
+import com.study.springboot.repository.GenreRepository;
 import com.study.springboot.repository.MasterRepository;
 import com.study.springboot.repository.MovieRepository;
 import com.study.springboot.repository.ProductDetailRepository;
@@ -28,10 +28,10 @@ import lombok.extern.log4j.Log4j2;
 class Template0217ApplicationTests {
 
 	@Autowired
-	EmpDeptMapper empDeptMapper;
+	MovieMapper empDeptMapper;
 	
 	@Autowired
-	EmpRepository empRepository;
+	GenreRepository empRepository;
 	
 	/*repository를 쓸수있게 객체생성을 알아서 해준다*/
 	@Autowired
