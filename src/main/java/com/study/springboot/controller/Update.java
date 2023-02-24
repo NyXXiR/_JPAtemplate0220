@@ -30,6 +30,7 @@ public class Update {
 	@PostMapping("/update")
 	public String upload(Movie movie) {
 		movieRepository.save(movie);
+
 		return "redirect:/view/list";
 	}
 }

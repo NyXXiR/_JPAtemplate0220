@@ -27,7 +27,7 @@
 	update Movie set title =#{title}, content =#{content}
 	where mno = #{mno}
 	</update>
-
+	
 
 
 
