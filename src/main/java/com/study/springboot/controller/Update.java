@@ -26,7 +26,7 @@ public class Update {
 	public String update(@PathVariable long mno, Model model) {
 		log.info("-----------------"+mno);
 	
-		Optional<Movie> movie = movieRepository.findById(mno);
+		Optional<Movie> movie = this.movieRepository.findById(mno);
 		log.info("-----------------"+movie);
 		
 		model.addAttribute("movie",movie);
