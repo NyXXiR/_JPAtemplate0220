@@ -6,9 +6,9 @@ layout:decorate="~{layout/basic.html}">
 <div layout:fragment="content">
 
 <form action="/view/update" method="get" th:object="${movie}">
-영화번호<input type ="text" name="mno"	 th:value="${mno}" readOnly/><br/>
-제목<input type="text" name="title" th:value="${title}" /><br/>
-내용<input type="text" name="content" th:value="${content}"/><br/>
+영화번호<input type ="text" name="mno"	 th:value="${mno}" readonly/><br/>
+제목<input type="text" name="title" th:value="*{title}" /><br/>
+내용<input type="text" name="content" th:value="*{content}"/><br/>
 <!-- 장르<input type="text" name="genre" th:value="*{genre}"/><br/> -->
 <input type="submit" />
 </form>
